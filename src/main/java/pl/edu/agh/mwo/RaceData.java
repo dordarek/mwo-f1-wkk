@@ -1,14 +1,31 @@
 package pl.edu.agh.mwo;
 
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.Map;
+
 public class RaceData {
 
+
+    @JsonProperty("session_key")
     int sessionKey;
 
+    @JsonProperty("meeting_key")
     int meetingKey;
 
+    @JsonProperty("date")
+    String date;
+    @JsonProperty("pit_duration")
     double pitDuration;
+    @JsonProperty("driver_number")
     int driverNumber;
+
+    @JsonProperty("lap_number")
     int lapNumber;
+
+
 
     public double getPitDuration() {
         return pitDuration;
@@ -33,20 +50,5 @@ public class RaceData {
         this.lapNumber = lapNumber;
     }
 
-    public int getSessionKey() {
-        return sessionKey;
-    }
-
-    public void setSessionKey(int sessionKey) {
-        this.sessionKey = sessionKey;
-    }
-
-    public int getMeetingKey() {
-        return meetingKey;
-    }
-
-    public void setMeetingKey(int meetingKey) {
-        this.meetingKey = meetingKey;
-    }
 }
 
